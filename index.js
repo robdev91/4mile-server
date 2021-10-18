@@ -1,6 +1,9 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const port = 3000
+
+app.use(cors())
 
 const repos = require('./mock').map(repo => {
   const { name, language, star_count } = repo
